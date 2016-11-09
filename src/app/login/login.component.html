@@ -1,0 +1,22 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdel-cell--12-col">
+    <form novalidate [formGroup]="form">
+      <md-card>
+        <md-card-title>Connexion</md-card-title>
+        <md-card-content>
+          <md-input placeholder="Name" maxlength="30"
+            formControlName="name"></md-input>
+          <md-input placeholder="Password" maxlength="30" type="password"
+            formControlName="password"></md-input>
+        </md-card-content>
+        <md-card-actions>
+          <button md-raised-button color="primary"
+            (click)="Connect(form.value.name, form.value.password)">
+            LogIn </button>
+        </md-card-actions>
+      </md-card>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="user" > User : {{ user.name }}</div>

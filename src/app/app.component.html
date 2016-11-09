@@ -1,3 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+  <!-- Simple header with scrollable tabs. -->
+  <div class='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
+    <header class='mdl-layout__header'>
+      <div class='mdl-layout__header-row'>
+        <!-- Title -->
+        <span class='mdl-layout-title link-home'>Ng2 Login V4</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class='mdl-layout-spacer'></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <!--<nav class='mdl-navigation '>
+          <li>Lien</li>
+          <li>Lien</li>
+          <li>Lien</li>
+          <li>Lien</li>
+        </nav>-->
+      </div>
+    </header>
+    <div class='mdl-layout__drawer'>
+      <span class='mdl-layout-title link-home'>Ng2 Login V4</span>
+      <nav class='mdl-navigation sidebar'>
+        <li>Lien</li>
+        <li>Lien</li>
+        <li>Lien</li>
+        <li>Lien</li>
+      </nav>
+    </div>
+    <main class='mdl-layout__content'>
+      <div class='page-content'> <!-- CONTENu PAGE -->
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>

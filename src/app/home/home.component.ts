@@ -1,22 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from './login.service';
-// Add the RxJS Observable operators.
-import './rxjs-operators';
+import { LoginService, User } from '../login.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
   providers: [ LoginService ]
 })
-export class AppComponent implements OnInit {
-  title = 'app works!';
+export class HomeComponent implements OnInit {
 
   constructor(
     private router: Router,
     private loginService: LoginService
-  ) { }
+  ) {}
 
   ngOnInit() {
     if (!this.loginService.isLogin()) { this.router.navigate(['/login']); };
