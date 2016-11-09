@@ -25,6 +25,8 @@ export class User {
 
 @Injectable()
 export class LoginService {
+  // url_server = 'http://dev69.local/api/loginv4/server.php';
+  url_server = 'http://bydev69.tk/api/ng2-login-v4/server.php';
   user: User;
   errorLogin: string;
   onUser: EventEmitter<Object> = new EventEmitter<Object>();
@@ -56,7 +58,7 @@ export class LoginService {
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
     let options = new RequestOptions({ headers: headers });
     return this.http.post(
-      'http://dev69.local/api/loginv4/server.php', body, options)
+      this.url_server, body, options)
         .map(this.extractData)
         .catch(this.handleError);
   }
