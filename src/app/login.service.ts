@@ -26,7 +26,7 @@ export class User {
 @Injectable()
 export class LoginService {
   // url_server = 'http://dev69.local/api/loginv4/server.php';
-  url_server = 'http://bydev69.tk/api/ng2-login-v4/server.php';
+  url_server = 'https://bydev69.tk/api/ng2-login-v4/server.php';
   user: User;
   errorLogin: string;
   onUser: EventEmitter<Object> = new EventEmitter<Object>();
